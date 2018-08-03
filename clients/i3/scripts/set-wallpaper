@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ ! -z "${I3_WALLPAPER}" ] && [ -f ${I3_WALLPAPER} ]; then
+    while ! (i3-msg "exec feh --no-fehbg --bg-fill ${I3_WALLPAPER}" > /dev/null 2>&1); do
+        sleep .5
+    done
+fi
